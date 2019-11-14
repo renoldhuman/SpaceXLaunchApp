@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissionDescription" customModule="SpaceXLaunchApp" customModuleProvider="target">
+            <connections>
+                <outlet property="containingView" destination="iN0-l3-epB" id="TCS-2A-Iq2"/>
+                <outlet property="missionDescription" destination="QIS-8O-GSR" id="6BU-Te-pDs"/>
+                <outlet property="missionName" destination="0tO-Nt-h7L" id="ujI-E2-FgK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="579" height="363"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIS-8O-GSR">
+                    <rect key="frame" x="5" y="51" width="569" height="307"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tO-Nt-h7L">
+                    <rect key="frame" x="5" y="5" width="554" height="41"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QIS-8O-GSR" secondAttribute="trailing" constant="5" id="Eun-53-QkU"/>
+                <constraint firstItem="QIS-8O-GSR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="HK2-kc-QC5"/>
+                <constraint firstItem="0tO-Nt-h7L" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="LSt-OK-Lzx"/>
+                <constraint firstItem="0tO-Nt-h7L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="PSM-J6-9WQ"/>
+                <constraint firstItem="QIS-8O-GSR" firstAttribute="top" secondItem="0tO-Nt-h7L" secondAttribute="bottom" constant="5" id="bEW-Lz-ffq"/>
+                <constraint firstAttribute="bottom" secondItem="QIS-8O-GSR" secondAttribute="bottom" constant="5" id="cDj-5a-eT3"/>
+                <constraint firstAttribute="trailing" secondItem="0tO-Nt-h7L" secondAttribute="trailing" constant="20" id="gN9-hV-upa"/>
+                <constraint firstItem="QIS-8O-GSR" firstAttribute="top" secondItem="0tO-Nt-h7L" secondAttribute="bottom" constant="5" id="rRU-JS-6a2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="257.24637681159425" y="-27.790178571428569"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hJA-GI-5vc">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Launch Table View Controller-->
+        <scene sceneID="7am-ku-GDw">
+            <objects>
+                <tableViewController id="hJA-GI-5vc" customClass="LaunchTableViewController" customModule="SpaceXLaunchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" id="beQ-4v-jyp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="launchTableCell" id="IxS-1k-JBN">
+                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IxS-1k-JBN" id="C5h-ZV-xg7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view tag="1000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbZ-ux-HZF" customClass="LaunchTableCell" customModule="SpaceXLaunchApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="tbZ-ux-HZF" secondAttribute="trailing" id="TLv-qp-7eh"/>
+                                        <constraint firstItem="tbZ-ux-HZF" firstAttribute="top" secondItem="C5h-ZV-xg7" secondAttribute="top" id="XET-cc-Pva"/>
+                                        <constraint firstItem="tbZ-ux-HZF" firstAttribute="leading" secondItem="C5h-ZV-xg7" secondAttribute="leading" id="eWs-ih-AfC"/>
+                                        <constraint firstAttribute="bottom" secondItem="tbZ-ux-HZF" secondAttribute="bottom" id="hep-eR-glW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hJA-GI-5vc" id="mil-0f-HPG"/>
+                            <outlet property="delegate" destination="hJA-GI-5vc" id="ePQ-tj-VOS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="qke-ta-jip"/>
+                    <connections>
+                        <segue destination="oKa-u5-l54" kind="show" identifier="missionDetailSegue" id="cbi-aa-PN3"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hjp-g6-6gu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="1712"/>
+        </scene>
+        <!--Mission Description View Controller-->
+        <scene sceneID="e60-VH-Wap">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0M-qw-guh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="oKa-u5-l54" customClass="MissionDescriptionViewController" customModule="SpaceXLaunchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZc-SF-P1a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gje-a2-XkA" customClass="MissionDescription" customModule="SpaceXLaunchApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="393" id="2be-xT-EjU"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VjA-9Y-f71">
+                                <rect key="frame" x="0.0" y="483" width="414" height="359"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="missionInfoCell" rowHeight="50" id="pOv-El-IMY">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pOv-El-IMY" id="OVB-fg-COg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7F-cw-aS6">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="50"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="R7F-cw-aS6" firstAttribute="trailing" secondItem="OVB-fg-COg" secondAttribute="trailingMargin" id="1IX-Ga-6ZY"/>
+                                                <constraint firstItem="R7F-cw-aS6" firstAttribute="leading" secondItem="OVB-fg-COg" secondAttribute="leadingMargin" id="IVT-8K-mcj"/>
+                                                <constraint firstItem="R7F-cw-aS6" firstAttribute="top" secondItem="OVB-fg-COg" secondAttribute="topMargin" constant="-11" id="RsM-XU-mVs"/>
+                                                <constraint firstItem="R7F-cw-aS6" firstAttribute="centerY" secondItem="OVB-fg-COg" secondAttribute="centerY" id="aoe-2b-KJJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTi-RO-qOz">
+                                <rect key="frame" x="88" y="401" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="8Vi-0H-Ioe"/>
+                                    <constraint firstAttribute="width" constant="74" id="SI1-T5-rJz"/>
+                                </constraints>
+                                <state key="normal" image="wikipediaLogo"/>
+                                <connections>
+                                    <action selector="wikipediaClick:" destination="oKa-u5-l54" eventType="touchUpInside" id="Xlk-ug-NfU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct0-3L-vzB">
+                                <rect key="frame" x="170" y="401" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="eta-Fb-N1i"/>
+                                    <constraint firstAttribute="height" constant="75.329999999999998" id="raI-y8-zWF"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="safari.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="websiteClick:" destination="oKa-u5-l54" eventType="touchUpInside" id="QhX-Jp-doP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-Qa-4Lm">
+                                <rect key="frame" x="252" y="401" width="74" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="9bh-Fi-wcE"/>
+                                    <constraint firstAttribute="width" constant="74" id="AdV-tF-nYE"/>
+                                </constraints>
+                                <state key="normal" image="twitterLogo"/>
+                                <connections>
+                                    <action selector="twitterClick:" destination="oKa-u5-l54" eventType="touchUpInside" id="xUR-T9-nwJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ct0-3L-vzB" firstAttribute="leading" secondItem="ZTi-RO-qOz" secondAttribute="trailing" constant="8" id="0vr-kG-f8H"/>
+                            <constraint firstItem="VjA-9Y-f71" firstAttribute="top" secondItem="ct0-3L-vzB" secondAttribute="bottom" constant="7.6699999999999999" id="2gH-cs-COq"/>
+                            <constraint firstItem="VjA-9Y-f71" firstAttribute="trailing" secondItem="8bQ-4n-VwT" secondAttribute="trailing" id="Dxn-x6-LPm"/>
+                            <constraint firstItem="VjA-9Y-f71" firstAttribute="top" secondItem="ZTi-RO-qOz" secondAttribute="bottom" constant="8" id="Iuj-Ux-knj"/>
+                            <constraint firstItem="VjA-9Y-f71" firstAttribute="leading" secondItem="8bQ-4n-VwT" secondAttribute="leading" id="NQJ-MV-g7m"/>
+                            <constraint firstItem="gje-a2-XkA" firstAttribute="leading" secondItem="8bQ-4n-VwT" secondAttribute="leading" id="Rav-ZW-bI4"/>
+                            <constraint firstItem="gje-a2-XkA" firstAttribute="trailing" secondItem="8bQ-4n-VwT" secondAttribute="trailing" id="WOC-b0-rvR"/>
+                            <constraint firstItem="qaX-Qa-4Lm" firstAttribute="leading" secondItem="ct0-3L-vzB" secondAttribute="trailing" constant="8" id="ZB0-xM-JzS"/>
+                            <constraint firstItem="VjA-9Y-f71" firstAttribute="top" secondItem="qaX-Qa-4Lm" secondAttribute="bottom" constant="8" id="brT-Gt-iFq"/>
+                            <constraint firstItem="VjA-9Y-f71" firstAttribute="top" secondItem="gje-a2-XkA" secondAttribute="bottom" constant="90" id="dgl-as-fdZ"/>
+                            <constraint firstAttribute="bottom" secondItem="VjA-9Y-f71" secondAttribute="bottom" id="kr2-WH-Pj3"/>
+                            <constraint firstItem="gje-a2-XkA" firstAttribute="top" secondItem="8bQ-4n-VwT" secondAttribute="top" id="ksb-Gl-xdg"/>
+                            <constraint firstItem="ct0-3L-vzB" firstAttribute="centerX" secondItem="uZc-SF-P1a" secondAttribute="centerX" id="tQL-QR-1sr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8bQ-4n-VwT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DmI-Vm-44n"/>
+                    <connections>
+                        <outlet property="missionDescriptionView" destination="gje-a2-XkA" id="Vxj-RO-AzZ"/>
+                        <outlet property="tableView" destination="VjA-9Y-f71" id="Oz0-pO-Au3"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1774" y="1712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="safari.fill" catalog="system" width="64" height="60"/>
+        <image name="twitterLogo" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="wikipediaLogo" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
+</document>
